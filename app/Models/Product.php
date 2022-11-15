@@ -21,6 +21,10 @@ class Product extends Model
     {
         $model = self::query();
 
+        if($request->name){
+            $model = $model->where('id', $request->id);
+        }
+
        if($request->name){
            $model = $model->where('name', 'like', "%".$request->name."%");
        }
