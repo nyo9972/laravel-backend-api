@@ -39,6 +39,7 @@ class Product extends Model
 
     public static function createProduct($request)
     {
+
         return self::query()
             ->create([
             'name' => $request->name,
